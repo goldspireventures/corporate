@@ -54,7 +54,7 @@ export const PORTFOLIO_COMPANIES: PortfolioCompany[] = [
       "Livia is vertical-aware, AI-assisted, and guest-first — from first booking to long-term client relationships.",
     focusAreas: ["Scheduling", "Guest surfaces", "Staff operations", "Vertical intelligence"],
     gradient: "from-amber-400/25 via-yellow-900/20 to-navy",
-    previewImage: "/images/portfolio/livia-preview.svg",
+    previewImage: "/images/portfolio/livia-preview.png",
   },
   {
     slug: "veil",
@@ -74,7 +74,7 @@ export const PORTFOLIO_COMPANIES: PortfolioCompany[] = [
       "Veil detects risky patterns in the flow of work, offers in-context protection, and gives teams org policies with a lightweight cloud layer.",
     focusAreas: ["Browser extension", "Team policy", "In-context detection", "Hosted unlock"],
     gradient: "from-slate-500/20 via-zinc-900/30 to-navy",
-    previewImage: "/images/portfolio/veil-preview.svg",
+    previewImage: "/images/portfolio/veil-preview.png",
   },
   {
     slug: "goldspire-studio",
@@ -94,7 +94,7 @@ export const PORTFOLIO_COMPANIES: PortfolioCompany[] = [
       "Goldspire Studio runs a blueprint-driven factory: branded clones and templates on a shared platform, with a private client portal and handover built in.",
     focusAreas: ["Fixed-scope delivery", "Web & mobile", "Client-owned repos", "Template catalog"],
     gradient: "from-yellow-500/20 via-amber-900/25 to-navy",
-    previewImage: "/images/portfolio/studio-preview.svg",
+    previewImage: "/images/portfolio/studio-preview.png",
   },
   {
     slug: "mulah",

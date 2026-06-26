@@ -9,14 +9,16 @@ export function PortfolioCardMedia({ company, className = "" }: PortfolioCardMed
   if (company.previewImage) {
     return (
       <div
-        className={`overflow-hidden rounded-lg border border-white/8 bg-black/30 ${className}`}
+        className={`group/media relative overflow-hidden rounded-lg border border-white/8 bg-black/30 ${className}`}
       >
         <img
           src={company.previewImage}
           alt={`${company.name} product preview`}
-          className="aspect-[16/9] w-full object-cover object-top"
+          className="aspect-[16/9] w-full object-cover object-top transition-transform duration-500 group-hover/media:scale-[1.02]"
           loading="lazy"
         />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-navy/80 via-navy/15 to-transparent" />
+        <div className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-white/5" />
       </div>
     );
   }

@@ -26,6 +26,45 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.brand-watermark {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.brand-watermark__mark {
+  position: absolute;
+  left: 50%;
+  top: 46%;
+  width: min(58vw, 520px);
+  height: auto;
+  max-width: none !important;
+  transform: translate(-50%, -50%);
+  opacity: 0.07;
+  filter: blur(0.4px) saturate(1.15);
+  -webkit-mask-image: radial-gradient(
+    ellipse 68% 62% at 50% 48%,
+    #000 0%,
+    rgba(0, 0, 0, 0.55) 42%,
+    transparent 72%
+  );
+  mask-image: radial-gradient(
+    ellipse 68% 62% at 50% 48%,
+    #000 0%,
+    rgba(0, 0, 0, 0.55) 42%,
+    transparent 72%
+  );
+}
+
+@media (min-width: 1024px) {
+  .brand-watermark__mark {
+    width: min(46vw, 600px);
+    opacity: 0.08;
+  }
+}
+
 .font-display {
   font-family: var(--font-display);
 }

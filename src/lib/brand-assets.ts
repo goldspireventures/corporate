@@ -9,6 +9,8 @@ export const BRAND_ASSETS = {
   /** Unprocessed master archive in repo. */
   logoSource: "/images/brand/goldspire-ventures-logo-source.png",
   logoMark: "/images/brand/goldspire-mark.png",
+  /** Spire only — transparent, for watermarks and overlays. */
+  logoMarkTransparent: "/images/brand/goldspire-mark-transparent.png",
   favicon: "/images/brand/favicon-32.png",
 } as const;
 

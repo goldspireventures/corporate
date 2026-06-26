@@ -6,5 +6,9 @@
   "logoMark": {
     "width": 211,
     "height": 370
+  },
+  "logoMarkTransparent": {
+    "width": 211,
+    "height": 370
   }
 }

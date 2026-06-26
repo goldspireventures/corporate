@@ -78,6 +78,14 @@ await sharp(markRaw.data, {
   .png()
   .toFile(markPath);
 
+const markTransparentPath = path.join(brandDir, "goldspire-mark-transparent.png");
+await sharp(markRaw.data, {
+  raw: { width: markRaw.info.width, height: markRaw.info.height, channels: 4 },
+})
+  .trim({ threshold: 30 })
+  .png()
+  .toFile(markTransparentPath);
+
 await sharp(markPath)
   .resize(32, 32, { fit: "contain", background: { ...NAVY, alpha: 1 } })
   .flatten({ background: NAVY })
@@ -90,6 +98,7 @@ const markMeta = await sharp(markPath).metadata();
 const manifest = {
   logoSite: { width: siteMeta.width ?? 0, height: siteMeta.height ?? 0 },
   logoMark: { width: markMeta.width ?? 0, height: markMeta.height ?? 0 },
+  logoMarkTransparent: { width: markMeta.width ?? 0, height: markMeta.height ?? 0 },
 };
 
 fs.writeFileSync(path.join(brandDir, "logo-dimensions.json"), JSON.stringify(manifest, null, 2));

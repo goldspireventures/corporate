@@ -5,7 +5,7 @@ import { GoldspireLogo } from "@/components/GoldspireLogo";
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-white/5 bg-rich-black">
+    <footer className="relative z-10 border-t border-white/5 bg-rich-black">
       <div className="mx-auto max-w-7xl section-pad !py-16">
         <div className="grid gap-12 md:grid-cols-4">
           <div className="md:col-span-2">

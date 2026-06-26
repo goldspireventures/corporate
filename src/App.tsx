@@ -1,5 +1,6 @@
 import { Route, Switch, useRoute } from "wouter";
 import { ScrollToTop } from "@/components/ScrollToTop";
+import { BrandWatermark } from "@/components/BrandWatermark";
 import { SiteNav } from "@/components/SiteNav";
 import { SiteFooter } from "@/components/SiteFooter";
 import { HomePage } from "@/pages/HomePage";
@@ -32,10 +33,11 @@ function CompanyRoute() {
 
 export function App() {
   return (
-    <div className="min-h-screen bg-navy text-white">
+    <div className="relative min-h-screen bg-navy text-white">
+      <BrandWatermark />
       <ScrollToTop />
       <SiteNav />
-      <main>
+      <main className="relative z-10">
         <Switch>
           <Route path="/" component={HomePage} />
           <Route path="/philosophy" component={PhilosophyPage} />

@@ -9,7 +9,9 @@
     "preview": "vite preview",
     "typecheck": "tsc -b --noEmit",
     "brand:export": "node scripts/export-brand-png.mjs",
-    "brand:process": "node scripts/process-brand-master.mjs"
+    "brand:process": "node scripts/process-brand-master.mjs",
+    "audit:site": "node scripts/audit-site.mjs",
+    "capture:portfolio": "node scripts/capture-portfolio-previews.mjs"
   },
   "dependencies": {
     "framer-motion": "^12.23.12",
