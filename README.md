@@ -3,7 +3,7 @@
 Public marketing site for **Goldspire Ventures Ltd** — portfolio, philosophy, and partnership inquiries.
 
 **Production:** [goldspireventures.com](https://goldspireventures.com)  
-**GitHub org:** [github.com/goldspire-global](https://github.com/goldspire-global) (`corporate` repo)  
+**GitHub org:** [github.com/goldspireventures](https://github.com/goldspireventures) (`corporate` repo)  
 **Canonical registry:** portfolio data lives in `src/data/portfolio.ts`
 
 This repo was extracted from the Livia monorepo (`artifacts/goldspire-corporate`) so the holding company site ships on its own release cadence.
@@ -31,10 +31,10 @@ Keep in sync with `REPO-REGISTRY.yaml` at the org level (see `goldspireventures/
 
 | Repo | Role |
 |------|------|
-| `goldspire-global/corporate` | This site |
-| `goldspire-global/livia` | Livia product monorepo |
-| `goldspire-global/veil` | Veil browser security (`secure-text`) |
-| `goldspire-global/launch-stack` | Goldspire Studio factory |
-| `goldspire-global/company` | Brand hierarchy & repo registry |
+| `goldspireventures/corporate` | This site |
+| `goldspireventures/livia` | Livia product monorepo |
+| `goldspireventures/veil` | Veil browser security (`secure-text`) |
+| `goldspireventures/launch-stack` | Goldspire Studio factory |
+| `goldspireventures/company` | Brand hierarchy & repo registry |
 
 See [BRAND-HIERARCHY.md](../docs/BRAND-HIERARCHY.md) in the org docs folder for the full map.
