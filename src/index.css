@@ -56,6 +56,23 @@ body {
   @apply px-5 sm:px-8 lg:px-12 py-24 sm:py-32;
 }
 
+/* Prevent Tailwind preflight (img { max-width: 100%; height: auto }) from blowing up brand logos. */
+.brand-logo-wrap {
+  display: inline-flex;
+  flex: none;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.brand-logo-img {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  object-fit: contain;
+  object-position: left center;
+}
+
 .heading-display {
   font-family: var(--font-display);
   @apply text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-semibold tracking-tight leading-[1.05];

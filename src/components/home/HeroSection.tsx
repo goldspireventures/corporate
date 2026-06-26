@@ -1,7 +1,6 @@
 import { Link } from "wouter";
 import { motion } from "framer-motion";
 import { ParticleField } from "@/components/ParticleField";
-import { GoldspireLogo } from "@/components/GoldspireLogo";
 import { fadeUp, stagger } from "@/lib/motion";
 
 export function HeroSection() {
@@ -10,9 +9,6 @@ export function HeroSection() {
       <ParticleField />
       <div className="relative z-10 mx-auto w-full max-w-7xl px-5 pb-20 pt-32 sm:px-8 lg:px-12">
         <motion.div initial="hidden" animate="visible" variants={stagger(0.12)} className="max-w-4xl">
-          <motion.div variants={fadeUp}>
-            <GoldspireLogo height={64} className="mb-8" />
-          </motion.div>
           <motion.h1 variants={fadeUp} className="heading-display">
             We build companies that solve{" "}
             <span className="gold-gradient-text">infrastructure-scale</span> problems.

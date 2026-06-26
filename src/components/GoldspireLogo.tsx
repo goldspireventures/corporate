@@ -18,15 +18,20 @@ export function GoldspireLogo({
   const w = Math.round(h * (dims.width / dims.height));
 
   return (
-    <img
-      src={variant === "mark" ? BRAND_ASSETS.logoMark : BRAND_ASSETS.logoFull}
-      alt={variant === "mark" ? "" : "Goldspire Ventures"}
+    <span
+      className={`brand-logo-wrap ${className}`}
+      style={{ width: w, height: h }}
       aria-hidden={variant === "mark" ? true : undefined}
-      width={w}
-      height={h}
-      className={`block shrink-0 object-contain object-left ${className}`}
-      style={{ height: h, width: w, maxHeight: h, maxWidth: w }}
-      decoding="async"
-    />
+    >
+      <img
+        src={variant === "mark" ? BRAND_ASSETS.logoMark : BRAND_ASSETS.logoFull}
+        alt={variant === "mark" ? "" : "Goldspire Ventures"}
+        className="brand-logo-img"
+        width={w}
+        height={h}
+        decoding="async"
+        draggable={false}
+      />
+    </span>
   );
 }
