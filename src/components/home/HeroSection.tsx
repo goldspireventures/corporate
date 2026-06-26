@@ -14,7 +14,7 @@ export function HeroSection() {
             <span className="gold-gradient-text">infrastructure-scale</span> problems.
           </motion.h1>
           <motion.p variants={fadeUp} className="mt-8 max-w-2xl text-lg leading-relaxed text-muted sm:text-xl">
-            Goldspire Ventures Ltd — a holding company and venture studio based in Dublin.
+            Goldspire Ventures Ltd — a holding company and venture studio.
           </motion.p>
           <motion.div variants={fadeUp} className="mt-10 flex flex-wrap gap-4">
             <Link

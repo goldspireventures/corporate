@@ -11,8 +11,7 @@ export function SiteFooter() {
           <div className="md:col-span-2">
             <GoldspireLogo height={56} asset="site" />
             <p className="mt-6 max-w-md text-sm leading-relaxed text-muted">
-              A holding company and venture studio. We originate, back, and scale product businesses
-              worldwide.
+              Goldspire Ventures Ltd — a holding company and venture studio.
             </p>
           </div>
           <div>
