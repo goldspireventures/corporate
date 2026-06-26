@@ -1,4 +1,4 @@
-import { BRAND_ASSETS } from "@/lib/brand-assets";
+import { BRAND_ASSETS, LOGO_DIMENSIONS } from "@/lib/brand-assets";
 
 type GoldspireLogoProps = {
   className?: string;
@@ -14,14 +14,18 @@ export function GoldspireLogo({
   height,
 }: GoldspireLogoProps) {
   const h = height ?? (variant === "mark" ? 36 : 48);
+  const dims = variant === "mark" ? LOGO_DIMENSIONS.logoMark : LOGO_DIMENSIONS.logoSite;
+  const w = Math.round(h * (dims.width / dims.height));
 
   return (
     <img
       src={variant === "mark" ? BRAND_ASSETS.logoMark : BRAND_ASSETS.logoFull}
       alt={variant === "mark" ? "" : "Goldspire Ventures"}
       aria-hidden={variant === "mark" ? true : undefined}
-      className={`w-auto shrink-0 ${className}`}
-      style={{ height: h }}
+      width={w}
+      height={h}
+      className={`block shrink-0 object-contain object-left ${className}`}
+      style={{ height: h, width: w, maxHeight: h, maxWidth: w }}
       decoding="async"
     />
   );
