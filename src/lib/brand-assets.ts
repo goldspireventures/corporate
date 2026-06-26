@@ -1,9 +1,11 @@
-/** Canonical brand assets — recreated from official lockup (Cinzel + Montserrat). */
+/** Canonical brand assets — official Goldspire Ventures lockup. */
 export const BRAND_ASSETS = {
-  /** Transparent background — use on site (nav, hero, footer). */
+  /** Transparent lockup for site (nav, hero, footer). */
   logoFull: "/images/brand/goldspire-ventures-logo-transparent.png",
-  /** Navy background — social, decks, print on dark. */
+  /** Official master on black — decks, social, touch icon. */
   logoFullNavy: "/images/brand/goldspire-ventures-logo.png",
+  /** Unprocessed master archive in repo. */
+  logoSource: "/images/brand/goldspire-ventures-logo-source.png",
   logoMark: "/images/brand/goldspire-mark.png",
-  favicon: "/images/brand/goldspire-mark.png",
+  favicon: "/images/brand/favicon-32.png",
 } as const;

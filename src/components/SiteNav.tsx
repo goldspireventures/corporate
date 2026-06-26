@@ -35,7 +35,7 @@ export function SiteNav() {
     >
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 sm:px-8 lg:px-12">
         <Link href="/" className="group block">
-          <GoldspireLogo height={40} className="opacity-95 group-hover:opacity-100 transition-opacity" />
+          <GoldspireLogo height={44} className="opacity-95 group-hover:opacity-100 transition-opacity" />
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">

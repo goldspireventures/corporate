@@ -27,21 +27,22 @@ Edit `src/data/portfolio.ts` — the single source for company pages (`/companie
 
 ## Brand assets
 
-Official lockup recreated as vector exports in `public/images/brand/`:
+Official lockup in `public/images/brand/`:
 
 | File | Use |
 |------|-----|
+| `goldspire-ventures-logo-source.png` | Archived master you provide |
 | `goldspire-ventures-logo-transparent.png` | Site nav, hero, footer |
-| `goldspire-ventures-logo.png` | Navy tile — decks, social, Apple touch icon |
-| `goldspire-mark.png` | Favicon, small marks |
+| `goldspire-ventures-logo.png` | Black-bg master — social, Apple touch icon |
+| `goldspire-mark.png` / `favicon-32.png` | Favicon |
 
-**Regenerate PNGs** after editing `scripts/render-brand-assets.html`:
+**Replace the master** — drop a new PNG and run:
 
 ```bash
-npm run brand:export
+npm run brand:process -- path/to/your-logo.png
 ```
 
-Source: Cinzel (GOLDSPIRE) + Montserrat (VENTURES) + spire line art matching the official lockup.
+Fallback vector export (older recreation): `npm run brand:export`
 
 
 ## Related repos
