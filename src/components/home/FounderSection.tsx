@@ -22,22 +22,20 @@ export function FounderSection() {
           </Reveal>
           <Reveal delay={0.1}>
             <p className="mt-6 text-lg leading-relaxed text-muted">
-              Goldspire was founded on a simple conviction: the most valuable companies are built at the
-              intersection of large unsolved problems and exceptional execution. We are not a single-product
-              startup — we are a venture studio designed to originate, validate, and scale multiple
-              category-defining businesses.
+              Goldspire started from a straightforward view: the best companies come from hard problems
+              and disciplined execution. We are not a single product — we build and hold multiple
+              ventures, each with its own team and market.
             </p>
           </Reveal>
           <Reveal delay={0.15}>
             <p className="mt-4 text-lg leading-relaxed text-muted">
-              From digital trust and financial infrastructure to intelligent platforms and mobility systems,
-              our mission is to create enduring companies that serve millions — across Africa, Europe, and
-              global markets — with precision, ambition, and integrity.
+              Trust, finance, mobility, and the platforms that sit on top of them are where we spend
+              most of our time — in Africa, Europe, and markets beyond.
             </p>
           </Reveal>
           <Reveal delay={0.2}>
             <blockquote className="mt-8 border-l-2 border-gold/50 pl-6 text-soft italic">
-              &ldquo;We do not chase trends. We build what the world will need before it knows to ask.&rdquo;
+              &ldquo;We would rather build one thing properly than ten things loudly.&rdquo;
             </blockquote>
           </Reveal>
         </div>

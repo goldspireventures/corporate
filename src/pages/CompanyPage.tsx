@@ -42,11 +42,11 @@ export function CompanyPage({ company }: { company: PortfolioCompany }) {
       <section className="section-pad bg-rich-black">
         <div className="mx-auto max-w-7xl grid gap-16 lg:grid-cols-2">
           <Reveal>
-            <h2 className="text-sm tracking-widest text-gold">THE PROBLEM</h2>
+            <h2 className="text-sm tracking-widest text-gold">The problem</h2>
             <p className="mt-4 text-lg leading-relaxed text-muted">{company.problem}</p>
           </Reveal>
           <Reveal delay={0.1}>
-            <h2 className="text-sm tracking-widest text-gold">OUR APPROACH</h2>
+            <h2 className="text-sm tracking-widest text-gold">The build</h2>
             <p className="mt-4 text-lg leading-relaxed text-muted">{company.approach}</p>
           </Reveal>
         </div>
@@ -60,7 +60,7 @@ export function CompanyPage({ company }: { company: PortfolioCompany }) {
           </Reveal>
 
           <Reveal delay={0.1}>
-            <h3 className="mt-16 text-sm tracking-widest text-gold">FOCUS AREAS</h3>
+            <h3 className="mt-16 text-sm tracking-widest text-gold">Focus areas</h3>
             <ul className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {company.focusAreas.map((area) => (
                 <li key={area} className="glass-panel rounded-xl px-5 py-4 text-sm text-muted">

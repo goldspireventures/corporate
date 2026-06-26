@@ -7,8 +7,8 @@ export function VisionPage() {
     <>
       <PageHeader
         label="VISION 2035"
-        title="A portfolio built for global scale"
-        description="Transformative companies serving millions across Africa and global markets."
+        title="Where the portfolio is headed"
+        description="Long-range focus areas across Africa and global markets — not a forecast, a direction."
       />
       <Vision2035Section />
       <MetricsSection />

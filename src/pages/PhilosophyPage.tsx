@@ -7,8 +7,8 @@ export function PhilosophyPage() {
     <>
       <PageHeader
         label="PHILOSOPHY"
-        title="Most companies build products. We build ecosystems."
-        description="How Goldspire identifies large-scale problems and creates companies capable of solving them."
+        title="We build companies, not slide decks"
+        description="How Goldspire finds problems worth solving and backs the teams that solve them."
       />
       <PhilosophySection />
       <FounderSection />

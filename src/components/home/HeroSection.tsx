@@ -14,9 +14,8 @@ export function HeroSection() {
             <span className="gold-gradient-text">infrastructure-scale</span> problems.
           </motion.h1>
           <motion.p variants={fadeUp} className="mt-8 max-w-2xl text-lg leading-relaxed text-muted sm:text-xl">
-            Goldspire Ventures is a holding company and venture studio — originating, backing, and scaling
-            product businesses from Dublin across Europe and Africa. Our portfolio is the proof; our
-            partners help us go further.
+            Goldspire Ventures is a holding company and venture studio based in Dublin. We originate,
+            back, and scale product businesses across Europe and Africa.
           </motion.p>
           <motion.div variants={fadeUp} className="mt-10 flex flex-wrap gap-4">
             <Link

@@ -55,7 +55,7 @@ export function PortfolioSection() {
               <Reveal>
                 <p className="text-xs tracking-[0.3em] text-gold">LIVE TODAY</p>
                 <p className="mt-2 max-w-2xl text-sm text-muted">
-                  Products and divisions shipping under the Ventures umbrella.
+                  Products and divisions shipping now.
                 </p>
               </Reveal>
               <div className="mt-10 grid gap-6 lg:grid-cols-2">

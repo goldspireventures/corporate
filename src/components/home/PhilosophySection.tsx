@@ -2,9 +2,9 @@ import { motion } from "framer-motion";
 import { Reveal } from "@/components/Reveal";
 
 const TIMELINE = [
-  { year: "Identify", text: "Large-scale market inefficiencies others overlook." },
-  { year: "Validate", text: "Rapid experimentation. Real users. Honest signals." },
-  { year: "Scale", text: "Enduring businesses with global ambition." },
+  { year: "Identify", text: "Problems large enough to support a standalone company." },
+  { year: "Validate", text: "Ship to real users early. Keep what works, drop what does not." },
+  { year: "Scale", text: "Back the venture with capital, team, and long-term intent." },
 ] as const;
 
 export function PhilosophySection() {
@@ -13,9 +13,9 @@ export function PhilosophySection() {
       <div className="mx-auto max-w-7xl">
         <Reveal>
           <p className="max-w-3xl text-lg leading-relaxed text-muted">
-            Goldspire Ventures exists to identify large-scale problems and create companies capable of
-            solving them. Our focus spans financial technology, digital trust, mobility, artificial
-            intelligence, commerce and emerging infrastructure.
+            Goldspire Ventures backs companies that solve problems we believe will matter for years.
+            Our work spans fintech, trust, mobility, applied intelligence, commerce, and the
+            infrastructure underneath them.
           </p>
         </Reveal>
 

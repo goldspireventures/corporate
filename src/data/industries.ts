@@ -10,66 +10,66 @@ export const INDUSTRIES: Industry[] = [
   {
     id: "fintech",
     name: "Fintech",
-    headline: "Financial infrastructure for the next billion users",
+    headline: "Financial tools where legacy rails fall short",
     detail:
-      "We build rails for payments, subscriptions, savings, and credit — designed for markets where legacy banking left gaps.",
-    examples: ["Mulah", "TrustBase verification for financial onboarding"],
+      "Payments, subscriptions, savings, and credit — built for markets where traditional banking left gaps.",
+    examples: ["Mulah", "TrustBase for onboarding verification"],
   },
   {
     id: "ai",
     name: "AI",
-    headline: "Intelligent systems with human-grade restraint",
+    headline: "Useful systems with clear limits",
     detail:
-      "Ambient assistants, operational copilots, and agent infrastructure — always with clear boundaries and tenant control.",
-    examples: ["S.I.M.I.", "Livia Liv intelligence layer"],
+      "Assistants and operational tools that stay inside defined permissions — for teams, not demos.",
+    examples: ["S.I.M.I.", "Livia operational intelligence"],
   },
   {
     id: "commerce",
     name: "Commerce",
-    headline: "Platforms where transactions meet trust",
+    headline: "Platforms built for repeat business",
     detail:
-      "Marketplaces, booking engines, and service commerce — built for repeat relationships, not one-off transactions.",
-    examples: ["Livia guest booking", "TrustBase merchant signals"],
+      "Booking, marketplaces, and service commerce — where the relationship matters as much as the transaction.",
+    examples: ["Livia", "TrustBase merchant signals"],
   },
   {
     id: "mobility",
     name: "Mobility",
-    headline: "How people and goods move through the world",
+    headline: "Movement in growing cities",
     detail:
-      "Routing, flow, and operator intelligence for cities and networks under increasing pressure.",
-    examples: ["MOVE"],
+      "Routing, flow, and operator visibility for networks under pressure.",
+    examples: ["MOVE", "EZFlow"],
   },
   {
     id: "identity",
     name: "Identity",
-    headline: "Digital trust as composable infrastructure",
+    headline: "Trust you can verify and reuse",
     detail:
-      "Verification, reputation, and credential layers that work across borders and platforms.",
+      "Reputation and credentials that work across platforms and borders.",
     examples: ["TrustBase", "Japa compliance pathways"],
   },
   {
     id: "infrastructure",
     name: "Infrastructure",
-    headline: "Foundational systems others build on",
+    headline: "The layer others build on",
     detail:
-      "Relocation stacks, data layers, and operational backbones — the unglamorous work that enables scale.",
+      "Relocation, data, and operations — the work that makes everything else possible.",
     examples: ["Japa", "TrustBase APIs"],
   },
   {
     id: "saas",
     name: "SaaS",
-    headline: "Vertical software that respects the work",
+    headline: "Software that fits the work",
     detail:
-      "Category-defining operating systems for industries that deserve better than generic tooling.",
-    examples: ["Livia People Business OS"],
+      "Operating systems for industries that have outgrown generic tools.",
+    examples: ["Livia"],
   },
 ];
 
 export const VISION_2035_AREAS = [
-  { title: "Digital Trust", desc: "Portable reputation across economies" },
-  { title: "Financial Infrastructure", desc: "Inclusive rails for savings and commerce" },
-  { title: "Commerce Platforms", desc: "Service-led economies at global scale" },
-  { title: "Intelligent Agents", desc: "Ambient AI with enterprise-grade control" },
-  { title: "Smart Mobility", desc: "Adaptive urban movement systems" },
-  { title: "Emerging Technologies", desc: "Early bets on what comes next" },
+  { title: "Digital trust", desc: "Reputation that carries across economies" },
+  { title: "Financial infrastructure", desc: "Rails for savings, payments, and commerce" },
+  { title: "Commerce platforms", desc: "Service-led businesses at scale" },
+  { title: "Applied intelligence", desc: "Assistants with real governance" },
+  { title: "Urban mobility", desc: "Networks that adapt, not only report" },
+  { title: "Emerging technology", desc: "Early bets where the curve is still forming" },
 ] as const;

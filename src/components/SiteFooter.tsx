@@ -11,8 +11,8 @@ export function SiteFooter() {
           <div className="md:col-span-2">
             <GoldspireLogo height={56} />
             <p className="mt-6 max-w-md text-sm leading-relaxed text-muted">
-              A holding company and venture studio — we build and back companies that solve
-              infrastructure-scale problems across Europe and Africa.
+              A holding company and venture studio. We build and back product businesses across
+              Europe and Africa.
             </p>
           </div>
           <div>
@@ -70,7 +70,7 @@ export function SiteFooter() {
         </div>
         <div className="mt-16 flex flex-col gap-2 border-t border-white/5 pt-8 text-xs text-muted sm:flex-row sm:items-center sm:justify-between">
           <p>{LEGAL_FOOTER_LINE}</p>
-          <p className="text-soft/60">Infrastructure-scale companies. Built to last.</p>
+          <p className="text-soft/60">Holding company · Dublin</p>
         </div>
       </div>
     </footer>

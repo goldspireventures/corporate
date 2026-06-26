@@ -1,12 +1,16 @@
 import { Reveal } from "@/components/Reveal";
 import { Counter } from "@/components/Counter";
-import { PORTFOLIO_COMPANIES, countLiveProducts } from "@/data/portfolio";
+import {
+  PORTFOLIO_COMPANIES,
+  countBuildingVentures,
+  countLiveProducts,
+} from "@/data/portfolio";
 
 const METRICS = [
-  { label: "Companies in Portfolio", value: PORTFOLIO_COMPANIES.length },
-  { label: "Products Launched", value: countLiveProducts() },
-  { label: "Markets in Focus", value: 12, suffix: "+" },
-  { label: "Users Impacted", value: 50, suffix: "K+" },
+  { label: "Companies in portfolio", value: PORTFOLIO_COMPANIES.length },
+  { label: "Products live", value: countLiveProducts() },
+  { label: "In development", value: countBuildingVentures() },
+  { label: "Focus regions", value: 2 },
 ] as const;
 
 export function MetricsSection() {
@@ -18,7 +22,7 @@ export function MetricsSection() {
             <Reveal key={m.label} delay={i * 0.08}>
               <div className="text-center">
                 <p className="text-4xl font-semibold text-gold sm:text-5xl">
-                  <Counter value={m.value} suffix={"suffix" in m ? m.suffix : ""} />
+                  <Counter value={m.value} />
                 </p>
                 <p className="mt-3 text-sm text-muted">{m.label}</p>
               </div>

@@ -9,8 +9,8 @@ export function PhilosophyBlurb() {
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-xs tracking-[0.3em] text-gold">HOW WE BUILD</p>
             <p className="mt-6 font-display text-xl leading-relaxed text-soft sm:text-2xl">
-              We identify infrastructure-scale problems, validate with real users, and spin out companies
-              built to last — across Europe and Africa.
+              We look for problems worth building a company around — then validate with real users
+              before we scale. Europe and Africa are home bases, not afterthoughts.
             </p>
             <Link
               href="/philosophy"

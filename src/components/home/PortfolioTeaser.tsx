@@ -19,8 +19,7 @@ export function PortfolioTeaser() {
                 Companies under the Ventures umbrella
               </h2>
               <p className="mt-3 max-w-xl text-sm leading-relaxed text-muted">
-                Live products ship today. Goldspire Studio is our services division — client delivery
-                lives at{" "}
+                What is live today. Studio client work is at{" "}
                 <a
                   href="https://goldspire.dev"
                   className="text-gold hover:underline"

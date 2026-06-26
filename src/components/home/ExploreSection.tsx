@@ -5,22 +5,22 @@ const EXPLORE = [
   {
     href: "/philosophy",
     title: "Philosophy",
-    desc: "How we think about building ecosystems, not just products.",
+    desc: "How we choose problems and back companies through validation.",
   },
   {
     href: "/industries",
     title: "Industries",
-    desc: "Fintech, AI, commerce, mobility, identity, infrastructure and SaaS.",
+    desc: "Fintech, AI, commerce, mobility, identity, infrastructure, and SaaS.",
   },
   {
     href: "/vision",
     title: "Vision 2035",
-    desc: "Our long-range roadmap across Africa and global markets.",
+    desc: "Where we are putting long-term effort across the portfolio.",
   },
   {
     href: "/partner",
     title: "Partner",
-    desc: "Investors, enterprises, governments and strategic alliances.",
+    desc: "Investors, enterprises, governments, and strategic alliances.",
   },
 ] as const;
 
