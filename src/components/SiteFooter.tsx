@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import { PORTFOLIO_COMPANIES } from "@/data/portfolio";
 import { LEGAL_FOOTER_LINE } from "@/lib/company";
+import { GoldspireLogo } from "@/components/GoldspireLogo";
 
 export function SiteFooter() {
   return (
@@ -8,8 +9,8 @@ export function SiteFooter() {
       <div className="mx-auto max-w-7xl section-pad !py-16">
         <div className="grid gap-12 md:grid-cols-4">
           <div className="md:col-span-2">
-            <p className="text-sm tracking-[0.25em] text-gold">GOLDSPIRE VENTURES</p>
-            <p className="mt-4 max-w-md text-sm leading-relaxed text-muted">
+            <GoldspireLogo height={52} />
+            <p className="mt-6 max-w-md text-sm leading-relaxed text-muted">
               A holding company and venture studio — we build and back companies that solve
               infrastructure-scale problems across Europe and Africa.
             </p>

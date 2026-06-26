@@ -1,46 +1,40 @@
+import { BRAND_ASSETS } from "@/lib/brand-assets";
+
 type GoldspireLogoProps = {
   className?: string;
-  showWordmark?: boolean;
-  size?: "sm" | "md";
+  /** Full lockup (icon + GOLDSPIRE + VENTURES) or spire mark only. */
+  variant?: "full" | "mark";
+  /** Pixel height — width scales automatically. */
+  height?: number;
 };
 
-export function GoldspireLogo({ className = "", showWordmark = true, size = "md" }: GoldspireLogoProps) {
-  const icon = size === "sm" ? 28 : 32;
-  const wordClass = size === "sm" ? "text-xs tracking-[0.18em]" : "text-sm tracking-[0.2em]";
-
-  return (
-    <span className={`inline-flex items-center gap-3 ${className}`}>
-      <svg
-        width={icon}
-        height={icon}
-        viewBox="0 0 32 32"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
+export function GoldspireLogo({
+  className = "",
+  variant = "full",
+  height,
+}: GoldspireLogoProps) {
+  if (variant === "mark") {
+    const h = height ?? 32;
+    return (
+      <img
+        src={BRAND_ASSETS.logoMark}
+        alt=""
         aria-hidden
-        className="shrink-0"
-      >
-        <rect width="32" height="32" rx="8" fill="#0B0D18" stroke="rgba(212,175,55,0.35)" strokeWidth="1" />
-        <path
-          d="M8 22V14L16 6L24 14V22"
-          stroke="#d4af37"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-        <path
-          d="M12 22V16L16 12L20 16V22"
-          stroke="#f5e6b8"
-          strokeWidth="1.25"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-        <circle cx="16" cy="9" r="1.25" fill="#d4af37" />
-      </svg>
-      {showWordmark ? (
-        <span className={`font-medium text-white/90 ${wordClass}`}>
-          GOLDSPIRE
-        </span>
-      ) : null}
-    </span>
+        height={h}
+        width={Math.round(h * 0.8)}
+        className={`w-auto shrink-0 ${className}`}
+      />
+    );
+  }
+
+  const h = height ?? 44;
+  return (
+    <img
+      src={BRAND_ASSETS.logoFull}
+      alt="Goldspire Ventures"
+      height={h}
+      width={Math.round(h * 1.05)}
+      className={`w-auto shrink-0 ${className}`}
+    />
   );
 }
