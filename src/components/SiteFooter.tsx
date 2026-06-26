@@ -10,8 +10,8 @@ export function SiteFooter() {
           <div className="md:col-span-2">
             <p className="text-sm tracking-[0.25em] text-gold">GOLDSPIRE VENTURES</p>
             <p className="mt-4 max-w-md text-sm leading-relaxed text-muted">
-              Venture studio and innovation holding company. Building transformative businesses across
-              fintech, AI, commerce, mobility, identity, and digital infrastructure.
+              A holding company and venture studio — we build and back companies that solve
+              infrastructure-scale problems across Europe and Africa.
             </p>
           </div>
           <div>
@@ -69,7 +69,7 @@ export function SiteFooter() {
         </div>
         <div className="mt-16 flex flex-col gap-2 border-t border-white/5 pt-8 text-xs text-muted sm:flex-row sm:items-center sm:justify-between">
           <p>{LEGAL_FOOTER_LINE}</p>
-          <p className="text-soft/60">Building companies that shape how people move, transact, connect and grow.</p>
+          <p className="text-soft/60">Infrastructure-scale companies. Built to last.</p>
         </div>
       </div>
     </footer>

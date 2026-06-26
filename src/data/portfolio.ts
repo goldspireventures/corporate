@@ -230,3 +230,11 @@ export function getCompaniesByRegion(region: PortfolioRegion): PortfolioCompany[
 export function countLiveProducts(): number {
   return PORTFOLIO_COMPANIES.filter((c) => c.status === "live" && c.industry !== "Services").length;
 }
+
+export function countBuildingVentures(): number {
+  return PORTFOLIO_COMPANIES.filter((c) => c.status === "building").length;
+}
+
+export function getLiveProductCompanies(): PortfolioCompany[] {
+  return PORTFOLIO_COMPANIES.filter((c) => c.status === "live" && c.industry !== "Services");
+}
