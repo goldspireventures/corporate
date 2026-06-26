@@ -25,7 +25,24 @@ Configured for Vercel (`vercel.json`). Connect the `goldspireventures` domain to
 
 Edit `src/data/portfolio.ts` — the single source for company pages (`/companies/:slug`), homepage teaser, footer links, and metrics counts.
 
-Keep in sync with `REPO-REGISTRY.yaml` at the org level (see `goldspireventures/company` meta repo or Personal Projects root copy).
+## Brand assets
+
+Official lockup recreated as vector exports in `public/images/brand/`:
+
+| File | Use |
+|------|-----|
+| `goldspire-ventures-logo-transparent.png` | Site nav, hero, footer |
+| `goldspire-ventures-logo.png` | Navy tile — decks, social, Apple touch icon |
+| `goldspire-mark.png` | Favicon, small marks |
+
+**Regenerate PNGs** after editing `scripts/render-brand-assets.html`:
+
+```bash
+npm run brand:export
+```
+
+Source: Cinzel (GOLDSPIRE) + Montserrat (VENTURES) + spire line art matching the official lockup.
+
 
 ## Related repos
 
