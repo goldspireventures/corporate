@@ -37,7 +37,7 @@ const PROOF_ITEMS = [
 
 export function ProofStrip() {
   return (
-    <section className="border-y border-white/5 bg-rich-black">
+    <section className="border-y border-white/5">
       <div className="mx-auto max-w-7xl px-5 py-8 sm:px-8 lg:px-12">
         <Reveal>
           <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">

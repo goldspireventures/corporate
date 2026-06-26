@@ -32,15 +32,19 @@ async function collectMetrics() {
       };
     });
 
-    const watermark = document.querySelector(".brand-watermark__mark");
-    const wr = watermark?.getBoundingClientRect();
-    const wcs = watermark ? getComputedStyle(watermark) : null;
+    const watermark = document.querySelector(".app-shell");
+    const wcs = watermark ? getComputedStyle(watermark, "::before") : null;
+    const shellRect = watermark?.getBoundingClientRect();
 
     return {
       title: document.title,
       h1: document.querySelector("h1")?.textContent?.trim().slice(0, 80) ?? null,
-      watermark: wr
-        ? { rect: { x: wr.x, y: wr.y, w: wr.width, h: wr.height }, opacity: wcs?.opacity }
+      watermark: watermark
+        ? {
+            shell: !!watermark,
+            beforeOpacity: wcs?.opacity ?? null,
+            beforeBackground: wcs?.backgroundImage?.slice(0, 80) ?? null,
+          }
         : null,
       imgs,
     };

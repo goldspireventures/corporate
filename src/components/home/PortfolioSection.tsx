@@ -28,7 +28,7 @@ export function PortfolioSection() {
   let cardIndex = 0;
 
   return (
-    <section className="section-pad !pt-12 bg-navy">
+    <section className="section-pad !pt-12">
       <div className="mx-auto max-w-7xl">
         <Reveal>
           <div className="flex flex-wrap gap-2">

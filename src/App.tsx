@@ -1,6 +1,5 @@
 import { Route, Switch, useRoute } from "wouter";
 import { ScrollToTop } from "@/components/ScrollToTop";
-import { BrandWatermark } from "@/components/BrandWatermark";
 import { SiteNav } from "@/components/SiteNav";
 import { SiteFooter } from "@/components/SiteFooter";
 import { HomePage } from "@/pages/HomePage";
@@ -33,8 +32,7 @@ function CompanyRoute() {
 
 export function App() {
   return (
-    <div className="relative min-h-screen bg-navy text-white">
-      <BrandWatermark />
+    <div className="app-shell relative min-h-screen text-white">
       <ScrollToTop />
       <SiteNav />
       <main className="relative z-10">

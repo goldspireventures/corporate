@@ -9,7 +9,7 @@ export function PortfolioTeaser() {
   const featured = FEATURED_SLUGS.map((slug) => PORTFOLIO_COMPANIES.find((c) => c.slug === slug)!);
 
   return (
-    <section className="section-pad !py-20 bg-rich-black">
+    <section className="section-pad !py-20 border-t border-white/5">
       <div className="mx-auto max-w-7xl">
         <Reveal>
           <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">

@@ -5,7 +5,7 @@ import { fadeUp, stagger } from "@/lib/motion";
 
 export function HeroSection() {
   return (
-    <section className="relative flex min-h-[88vh] items-center overflow-hidden bg-navy">
+    <section className="relative flex min-h-[88vh] items-center overflow-hidden">
       <ParticleField />
       <div className="relative z-10 mx-auto w-full max-w-7xl px-5 pb-20 pt-32 sm:px-8 lg:px-12">
         <motion.div initial="hidden" animate="visible" variants={stagger(0.12)} className="max-w-4xl">

@@ -10,7 +10,7 @@ export function PageHeader({
   description?: string;
 }) {
   return (
-    <section className="border-b border-white/5 bg-rich-black pt-28 pb-16 sm:pt-32 sm:pb-20">
+    <section className="border-b border-white/5 pt-28 pb-16 sm:pt-32 sm:pb-20">
       <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
         <Reveal>
           <p className="text-xs tracking-[0.3em] text-gold">{label}</p>

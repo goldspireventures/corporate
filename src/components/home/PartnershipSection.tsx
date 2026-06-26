@@ -10,7 +10,7 @@ const PARTNER_TYPES = [
 
 export function PartnershipSection() {
   return (
-    <section className="section-pad bg-rich-black border-t border-white/5">
+    <section className="section-pad border-t border-white/5">
       <div className="mx-auto max-w-4xl text-center">
         <Reveal>
           <p className="text-xs tracking-[0.3em] text-gold">PARTNER</p>

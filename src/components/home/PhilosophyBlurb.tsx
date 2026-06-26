@@ -3,7 +3,7 @@ import { Reveal } from "@/components/Reveal";
 
 export function PhilosophyBlurb() {
   return (
-    <section className="section-pad !py-20 bg-navy border-t border-white/5">
+    <section className="section-pad !py-20 border-t border-white/5">
       <div className="mx-auto max-w-7xl">
         <Reveal>
           <div className="mx-auto max-w-3xl text-center">
