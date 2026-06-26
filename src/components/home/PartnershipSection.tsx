@@ -1,4 +1,10 @@
 import { Reveal } from "@/components/Reveal";
+import {
+  STUDIO_CONTACT_EMAIL,
+  STUDIO_CONTACT_URL,
+  STUDIO_SITE_URL,
+  SUPPORT_EMAIL,
+} from "@/lib/company";
 
 const PARTNER_TYPES = [
   "Investors",
@@ -42,7 +48,7 @@ export function PartnershipSection() {
                 </ul>
                 <div className="mt-8 flex flex-wrap gap-3">
                   <a
-                    href="https://goldspire.dev"
+                    href={STUDIO_SITE_URL}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="rounded-full bg-gold px-7 py-3.5 text-sm font-medium text-rich-black hover:bg-[#e8c75a] transition-colors"
@@ -50,7 +56,7 @@ export function PartnershipSection() {
                     Explore Goldspire Studio
                   </a>
                   <a
-                    href="https://goldspire.dev/templates"
+                    href={`${STUDIO_SITE_URL}/templates`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="rounded-full border border-white/15 px-7 py-3.5 text-sm text-white hover:border-gold/40 hover:text-gold transition-colors"
@@ -69,10 +75,13 @@ export function PartnershipSection() {
                 <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-navy/90 via-transparent to-transparent" />
                 <p className="absolute bottom-4 left-4 right-4 text-xs text-muted">
                   Live at{" "}
-                  <a href="https://goldspire.dev" className="text-gold hover:underline" target="_blank" rel="noopener noreferrer">
+                  <a href={STUDIO_SITE_URL} className="text-gold hover:underline" target="_blank" rel="noopener noreferrer">
                     goldspire.dev
                   </a>
-                  {" · "}hello@goldspire.dev
+                  {" · "}
+                  <a href={`mailto:${STUDIO_CONTACT_EMAIL}`} className="text-gold hover:underline">
+                    {STUDIO_CONTACT_EMAIL}
+                  </a>
                 </p>
               </div>
             </div>
@@ -107,15 +116,19 @@ export function PartnershipSection() {
 
           <Reveal delay={0.14}>
             <a
-              href="mailto:support@goldspireventures.com?subject=Partnership%20inquiry"
+              href={`mailto:${SUPPORT_EMAIL}?subject=Partnership%20inquiry`}
               className="mt-10 inline-flex rounded-full border border-gold/40 px-8 py-4 text-sm font-medium text-gold hover:bg-gold/10 transition-colors"
             >
               Start a conversation
             </a>
             <p className="mt-4 text-xs text-muted">
               For Studio enquiries, use{" "}
-              <a href="https://goldspire.dev/contact" className="text-gold hover:underline" target="_blank" rel="noopener noreferrer">
-                goldspire.dev/contact
+              <a href={STUDIO_CONTACT_URL} className="text-gold hover:underline" target="_blank" rel="noopener noreferrer">
+                {STUDIO_CONTACT_URL.replace("https://", "")}
+              </a>
+              {" "}or{" "}
+              <a href={`mailto:${STUDIO_CONTACT_EMAIL}`} className="text-gold hover:underline">
+                {STUDIO_CONTACT_EMAIL}
               </a>
               .
             </p>

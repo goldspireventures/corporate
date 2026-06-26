@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useLocation } from "wouter";
 import { motion, AnimatePresence } from "framer-motion";
 import { GoldspireLogo } from "@/components/GoldspireLogo";
+import { SUPPORT_EMAIL } from "@/lib/company";
 
 const NAV = [
   { href: "/philosophy", label: "Philosophy" },
@@ -45,7 +46,7 @@ export function SiteNav() {
             </Link>
           ))}
           <a
-            href="mailto:support@goldspireventures.com"
+            href={`mailto:${SUPPORT_EMAIL}`}
             className="rounded-full border border-gold/40 px-4 py-2 text-sm text-gold hover:bg-gold/10 transition-colors"
           >
             Contact
@@ -76,8 +77,8 @@ export function SiteNav() {
                   {item.label}
                 </Link>
               ))}
-              <a href="mailto:support@goldspireventures.com" className="text-gold">
-                support@goldspireventures.com
+              <a href={`mailto:${SUPPORT_EMAIL}`} className="text-gold">
+                {SUPPORT_EMAIL}
               </a>
             </div>
           </motion.div>

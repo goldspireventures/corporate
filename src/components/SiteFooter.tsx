@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import { PORTFOLIO_COMPANIES } from "@/data/portfolio";
-import { LEGAL_FOOTER_LINE } from "@/lib/company";
+import { LEGAL_FOOTER_LINE, STUDIO_SITE_URL, SUPPORT_EMAIL } from "@/lib/company";
 import { GoldspireLogo } from "@/components/GoldspireLogo";
 
 export function SiteFooter() {
@@ -11,8 +11,8 @@ export function SiteFooter() {
           <div className="md:col-span-2">
             <GoldspireLogo height={56} asset="site" />
             <p className="mt-6 max-w-md text-sm leading-relaxed text-muted">
-              A holding company and venture studio. We build and back product businesses across
-              Europe and Africa.
+              A holding company and venture studio. We originate, back, and scale product businesses
+              worldwide.
             </p>
           </div>
           <div>
@@ -56,7 +56,12 @@ export function SiteFooter() {
                 </Link>
               </li>
               <li>
-                <a href="mailto:support@goldspireventures.com" className="hover:text-gold transition-colors">
+                <a href={STUDIO_SITE_URL} className="hover:text-gold transition-colors" target="_blank" rel="noopener noreferrer">
+                  Goldspire Studio
+                </a>
+              </li>
+              <li>
+                <a href={`mailto:${SUPPORT_EMAIL}`} className="hover:text-gold transition-colors">
                   Contact
                 </a>
               </li>

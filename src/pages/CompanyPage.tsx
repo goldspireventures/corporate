@@ -4,6 +4,7 @@ import { Reveal } from "@/components/Reveal";
 import { PortfolioCardMedia } from "@/components/portfolio/PortfolioCardMedia";
 import type { PortfolioCompany } from "@/data/portfolio";
 import { statusLabel } from "@/lib/motion";
+import { SUPPORT_EMAIL } from "@/lib/company";
 
 export function CompanyPage({ company }: { company: PortfolioCompany }) {
   return (
@@ -86,7 +87,7 @@ export function CompanyPage({ company }: { company: PortfolioCompany }) {
               </span>
             )}
             <a
-              href="mailto:support@goldspireventures.com"
+              href={`mailto:${SUPPORT_EMAIL}`}
               className="rounded-full border border-gold/30 px-7 py-3 text-sm text-gold hover:bg-gold/10 transition-colors"
             >
               Partner on this venture
