@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "wouter";
 import { motion, AnimatePresence } from "framer-motion";
+import { GoldspireLogo } from "@/components/GoldspireLogo";
 
 const NAV = [
   { href: "/philosophy", label: "Philosophy" },
@@ -33,13 +34,8 @@ export function SiteNav() {
       }`}
     >
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 sm:px-8 lg:px-12">
-        <Link href="/" className="group flex items-center gap-3">
-          <span className="flex h-8 w-8 items-center justify-center rounded-full border border-gold/30 text-xs font-semibold text-gold">
-            G
-          </span>
-          <span className="text-sm font-medium tracking-[0.2em] text-white/90 group-hover:text-gold transition-colors">
-            GOLDSPIRE
-          </span>
+        <Link href="/" className="group">
+          <GoldspireLogo className="group-hover:[&_span]:text-gold transition-colors" />
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">

@@ -15,6 +15,8 @@ export type PortfolioCompany = {
   approach: string;
   focusAreas: string[];
   gradient: string;
+  /** Product preview for portfolio cards (SVG mock or screenshot path). */
+  previewImage?: string;
   /** GitHub repo name under github.com/goldspireventures */
   githubRepo?: string;
 };
@@ -52,6 +54,7 @@ export const PORTFOLIO_COMPANIES: PortfolioCompany[] = [
       "Livia is vertical-aware, AI-assisted, and guest-first — from first booking to long-term client relationships.",
     focusAreas: ["Scheduling", "Guest surfaces", "Staff operations", "Vertical intelligence"],
     gradient: "from-amber-400/25 via-yellow-900/20 to-navy",
+    previewImage: "/images/portfolio/livia-preview.svg",
   },
   {
     slug: "veil",
@@ -71,6 +74,7 @@ export const PORTFOLIO_COMPANIES: PortfolioCompany[] = [
       "Veil detects risky patterns in the flow of work, offers in-context protection, and gives teams org policies with a lightweight cloud layer.",
     focusAreas: ["Browser extension", "Team policy", "In-context detection", "Hosted unlock"],
     gradient: "from-slate-500/20 via-zinc-900/30 to-navy",
+    previewImage: "/images/portfolio/veil-preview.svg",
   },
   {
     slug: "goldspire-studio",
@@ -90,6 +94,7 @@ export const PORTFOLIO_COMPANIES: PortfolioCompany[] = [
       "Goldspire Studio runs a blueprint-driven factory: branded clones and templates on a shared platform, with a private client portal and handover built in.",
     focusAreas: ["Fixed-scope delivery", "Web & mobile", "Client-owned repos", "Template catalog"],
     gradient: "from-yellow-500/20 via-amber-900/25 to-navy",
+    previewImage: "/images/portfolio/studio-preview.svg",
   },
   {
     slug: "mulah",
@@ -225,6 +230,34 @@ export function getCompanyBySlug(slug: string): PortfolioCompany | undefined {
 
 export function getCompaniesByRegion(region: PortfolioRegion): PortfolioCompany[] {
   return PORTFOLIO_COMPANIES.filter((c) => c.region === region);
+}
+
+const STATUS_SORT: Record<CompanyStatus, number> = { live: 0, building: 1, stealth: 2 };
+
+function canonicalIndex(slug: string): number {
+  const i = PORTFOLIO_COMPANIES.findIndex((c) => c.slug === slug);
+  return i === -1 ? 999 : i;
+}
+
+/** Live first, then building, then stealth — preserves canonical order within each band. */
+export function sortPortfolioCompanies(companies: readonly PortfolioCompany[]): PortfolioCompany[] {
+  return [...companies].sort((a, b) => {
+    const byStatus = STATUS_SORT[a.status] - STATUS_SORT[b.status];
+    if (byStatus !== 0) return byStatus;
+    return canonicalIndex(a.slug) - canonicalIndex(b.slug);
+  });
+}
+
+export function getLivePortfolioCompanies(): PortfolioCompany[] {
+  return sortPortfolioCompanies(PORTFOLIO_COMPANIES.filter((c) => c.status === "live"));
+}
+
+export function getBuildingPortfolioCompanies(): PortfolioCompany[] {
+  return sortPortfolioCompanies(PORTFOLIO_COMPANIES.filter((c) => c.status === "building"));
+}
+
+export function getCompaniesByRegionSorted(region: PortfolioRegion): PortfolioCompany[] {
+  return sortPortfolioCompanies(getCompaniesByRegion(region));
 }
 
 export function countLiveProducts(): number {

@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import { motion } from "framer-motion";
 import { Reveal } from "@/components/Reveal";
+import { PortfolioCardMedia } from "@/components/portfolio/PortfolioCardMedia";
 import type { PortfolioCompany } from "@/data/portfolio";
 import { statusLabel } from "@/lib/motion";
 
@@ -8,10 +9,15 @@ export function CompanyPage({ company }: { company: PortfolioCompany }) {
   return (
     <div className="bg-navy">
       <section className={`relative overflow-hidden bg-gradient-to-br ${company.gradient}`}>
-        <div className="mx-auto max-w-7xl px-5 pb-20 pt-32 sm:px-8 lg:px-12">
+        <div className="mx-auto max-w-7xl px-5 pb-12 pt-32 sm:px-8 lg:px-12">
           <Link href="/portfolio" className="text-sm text-muted hover:text-gold transition-colors">
             ← Portfolio
           </Link>
+          {company.previewImage ? (
+            <div className="mt-8 max-w-3xl">
+              <PortfolioCardMedia company={company} />
+            </div>
+          ) : null}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

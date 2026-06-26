@@ -14,7 +14,7 @@ export function PartnershipSection() {
       <div className="mx-auto max-w-4xl text-center">
         <Reveal>
           <p className="text-xs tracking-[0.3em] text-gold">PARTNER</p>
-          <h2 className="mt-4 text-2xl font-semibold sm:text-3xl">Build the next company with us</h2>
+          <h2 className="mt-4 font-display text-2xl font-semibold sm:text-3xl">Build the next company with us</h2>
           <p className="mt-4 text-muted leading-relaxed">
             We work with capital partners, enterprises, and institutions who think in decades — not
             quarters. If you are exploring co-investment, pilots, or strategic alignment across our
