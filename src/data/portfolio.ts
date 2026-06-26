@@ -81,7 +81,7 @@ export const PORTFOLIO_COMPANIES: PortfolioCompany[] = [
     name: "Goldspire Studio",
     tagline: "Product design & engineering",
     description:
-      "The Ventures studio division — fixed-scope design and engineering for founders who need a credible product in market, with clear delivery and code they keep.",
+      "Goldspire's studio division — fixed-scope design and engineering for founders who need a credible product in market, with clear delivery and code they keep.",
     industry: "Services",
     region: "global",
     status: "live",
@@ -113,6 +113,7 @@ export const PORTFOLIO_COMPANIES: PortfolioCompany[] = [
       "Mulah focuses on subscription clarity first — what is running, what changed, and where there is room to adjust — then ties that to wider spending habits.",
     focusAreas: ["Subscription tracking", "Spend visibility", "Savings habits", "Open banking"],
     gradient: "from-emerald-500/15 via-teal-900/25 to-navy",
+    previewImage: "/images/portfolio/mulah-preview.png",
   },
   {
     slug: "simi",
@@ -131,6 +132,7 @@ export const PORTFOLIO_COMPANIES: PortfolioCompany[] = [
       "S.I.M.I. ties together context, permissions, and tools in one layer — so help shows up in the right place with boundaries teams can actually enforce.",
     focusAreas: ["Cross-app context", "Permission model", "Tool integration", "Tenant controls"],
     gradient: "from-violet-500/20 via-purple-900/30 to-navy",
+    previewImage: "/images/portfolio/simi-preview.png",
   },
   {
     slug: "triforge",
@@ -149,6 +151,7 @@ export const PORTFOLIO_COMPANIES: PortfolioCompany[] = [
       "Triforge ships focused products on a shared integration model — connect the mesh, prove what matters, run the plan when things break.",
     focusAreas: ["Service mesh", "Verifiable credentials", "Continuity planning", "Open integration"],
     gradient: "from-indigo-500/15 via-slate-900/30 to-navy",
+    previewImage: "/images/portfolio/triforge-preview.png",
   },
   {
     slug: "valrolly",
@@ -164,9 +167,10 @@ export const PORTFOLIO_COMPANIES: PortfolioCompany[] = [
     problem:
       "Ticketing products handle checkout. Everything else — staff, comms, on-site changes — often lives in spreadsheets and group chats.",
     approach:
-      "Valrolly builds workflows around how events actually run, with room to align over time with other Ventures products where appointment and event models meet.",
+      "Valrolly builds workflows around how events actually run, with room to align over time with other portfolio companies where appointment and event models meet.",
     focusAreas: ["Ticketing", "On-site operations", "Operator dashboards", "Attendee experience"],
     gradient: "from-rose-500/15 via-fuchsia-900/25 to-navy",
+    previewImage: "/images/portfolio/valrolly-preview.png",
   },
   {
     slug: "trustbase",
@@ -185,6 +189,7 @@ export const PORTFOLIO_COMPANIES: PortfolioCompany[] = [
       "TrustBase turns signals into durable profiles and APIs — verification that platforms can plug into without rebuilding trust from scratch each time.",
     focusAreas: ["Reputation signals", "Verification APIs", "Fraud resistance", "Cross-border trust"],
     gradient: "from-amber-500/20 via-orange-900/30 to-navy",
+    previewImage: "/images/portfolio/trustbase-preview.png",
   },
   {
     slug: "move-ezflow",
@@ -203,6 +208,7 @@ export const PORTFOLIO_COMPANIES: PortfolioCompany[] = [
       "MOVE and EZFlow combine live routing data, operator views, and demand shaping so networks can adapt instead of only report.",
     focusAreas: ["Flow optimisation", "Operator dashboards", "Demand shaping", "Routing"],
     gradient: "from-cyan-500/15 via-slate-800/30 to-navy",
+    previewImage: "/images/portfolio/move-ezflow-preview.png",
   },
   {
     slug: "japa",
@@ -221,6 +227,7 @@ export const PORTFOLIO_COMPANIES: PortfolioCompany[] = [
       "Japa maps pathways, verified providers, and community knowledge into a single stack people can follow step by step.",
     focusAreas: ["Relocation pathways", "Provider network", "Compliance support", "Community knowledge"],
     gradient: "from-sky-500/15 via-blue-900/25 to-navy",
+    previewImage: "/images/portfolio/japa-preview.png",
   },
 ];
 
@@ -260,14 +267,35 @@ export function getCompaniesByRegionSorted(region: PortfolioRegion): PortfolioCo
   return sortPortfolioCompanies(getCompaniesByRegion(region));
 }
 
+export function countLiveVentures(): number {
+  return PORTFOLIO_COMPANIES.filter((c) => c.status === "live").length;
+}
+
+/** All companies with a live product or division today. */
 export function countLiveProducts(): number {
-  return PORTFOLIO_COMPANIES.filter((c) => c.status === "live" && c.industry !== "Services").length;
+  return PORTFOLIO_COMPANIES.filter((c) => c.status === "live").length;
 }
 
 export function countBuildingVentures(): number {
   return PORTFOLIO_COMPANIES.filter((c) => c.status === "building").length;
 }
 
+export function countFocusRegions(): number {
+  return PORTFOLIO_REGIONS.length;
+}
+
+export type PortfolioMetric = { label: string; value: number };
+
+/** Vision / metrics strip — every value derived from portfolio data, no literals. */
+export function getPortfolioMetrics(): PortfolioMetric[] {
+  return [
+    { label: "Portfolio companies", value: PORTFOLIO_COMPANIES.length },
+    { label: "Live today", value: countLiveVentures() },
+    { label: "In development", value: countBuildingVentures() },
+    { label: "Focus regions", value: countFocusRegions() },
+  ];
+}
+
 export function getLiveProductCompanies(): PortfolioCompany[] {
-  return PORTFOLIO_COMPANIES.filter((c) => c.status === "live" && c.industry !== "Services");
+  return PORTFOLIO_COMPANIES.filter((c) => c.status === "live");
 }

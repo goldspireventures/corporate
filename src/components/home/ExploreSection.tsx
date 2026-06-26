@@ -20,7 +20,7 @@ const EXPLORE = [
   {
     href: "/partner",
     title: "Partner",
-    desc: "Investors, enterprises, governments, and strategic alliances.",
+    desc: "Studio delivery, co-investment, pilots, and strategic alliances.",
   },
 ] as const;
 

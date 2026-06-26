@@ -6,7 +6,7 @@ export function PortfolioPage() {
     <>
       <PageHeader
         label="PORTFOLIO"
-        title="Companies under the Ventures umbrella"
+        title="Companies under Goldspire's umbrella"
         description="Live products first, then ventures in development across Europe and Africa."
       />
       <PortfolioSection />

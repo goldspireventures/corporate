@@ -35,7 +35,7 @@ export function FounderSection() {
           </Reveal>
           <Reveal delay={0.2}>
             <blockquote className="mt-8 border-l-2 border-gold/50 pl-6 text-soft italic">
-              &ldquo;We would rather build one thing properly than ten things loudly.&rdquo;
+              &ldquo;What is worth doing, is worth doing well.&rdquo;
             </blockquote>
           </Reveal>
         </div>

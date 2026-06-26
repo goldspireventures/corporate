@@ -14,7 +14,7 @@ const auditDir = path.join(__dirname, "..", ".audit", "portfolio-captures");
 fs.mkdirSync(outDir, { recursive: true });
 fs.mkdirSync(auditDir, { recursive: true });
 
-const studioUrl = process.argv[2] ?? "http://127.0.0.1:4010";
+const studioUrl = process.argv[2] ?? "https://goldspire.dev";
 
 /** Best public-facing page per product — hero / value prop, not auth or admin. */
 const CAPTURES = [

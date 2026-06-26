@@ -11,7 +11,8 @@
     "brand:export": "node scripts/export-brand-png.mjs",
     "brand:process": "node scripts/process-brand-master.mjs",
     "audit:site": "node scripts/audit-site.mjs",
-    "capture:portfolio": "node scripts/capture-portfolio-previews.mjs"
+    "capture:portfolio": "node scripts/capture-portfolio-previews.mjs",
+    "generate:building-previews": "node scripts/generate-building-previews.mjs"
   },
   "dependencies": {
     "framer-motion": "^12.23.12",

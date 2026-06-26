@@ -42,7 +42,7 @@ export function ProofStrip() {
         <Reveal>
           <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
             <p className="text-sm text-muted">
-              <span className="text-gold font-medium">{countLiveProducts()} products live</span>
+              <span className="text-gold font-medium">{countLiveProducts()} live today</span>
               {" · "}Goldspire Ventures Ltd · Dublin & global
             </p>
             <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">

@@ -7,7 +7,7 @@ export function PhilosophyPage() {
     <>
       <PageHeader
         label="PHILOSOPHY"
-        title="We build companies, not slide decks"
+        title="We build companies for the long run"
         description="How Goldspire finds problems worth solving and backs the teams that solve them."
       />
       <PhilosophySection />

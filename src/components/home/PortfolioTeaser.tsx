@@ -16,7 +16,7 @@ export function PortfolioTeaser() {
             <div>
               <p className="text-xs tracking-[0.3em] text-gold">PORTFOLIO</p>
               <h2 className="mt-3 font-display text-2xl font-semibold sm:text-3xl">
-                Companies under the Ventures umbrella
+                Companies under Goldspire&apos;s umbrella
               </h2>
               <p className="mt-3 max-w-xl text-sm leading-relaxed text-muted">
                 What is live today. Studio client work is at{" "}

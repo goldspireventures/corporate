@@ -7,7 +7,7 @@ export function PartnerPage() {
       <PageHeader
         label="PARTNERSHIP"
         title="Partner with Goldspire"
-        description="For investors, enterprises, and institutions interested in a company in the portfolio."
+        description="Work with Goldspire Studio on a fixed-scope product, or partner with us on ventures in the portfolio."
       />
       <PartnershipSection />
     </>

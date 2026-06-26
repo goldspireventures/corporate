@@ -21,15 +21,6 @@ export function Vision2035Section() {
                   </span>
                   <h3 className="mt-3 text-lg font-semibold">{area.title}</h3>
                   <p className="mt-2 text-sm text-muted">{area.desc}</p>
-                  <div className="mt-4 h-1 w-full overflow-hidden rounded-full bg-white/5">
-                    <motion.div
-                      className="h-full bg-gradient-to-r from-gold/40 to-gold"
-                      initial={{ width: 0 }}
-                      whileInView={{ width: `${55 + i * 7}%` }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 1.2, delay: i * 0.1 }}
-                    />
-                  </div>
                 </motion.div>
               </Reveal>
             ))}
