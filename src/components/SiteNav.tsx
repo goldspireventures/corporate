@@ -29,8 +29,8 @@ export function SiteNav() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 overflow-hidden transition-all duration-500 ${
-        scrolled ? "border-b border-white/5 bg-navy/80 backdrop-blur-xl" : "bg-transparent"
+      className={`site-header fixed inset-x-0 top-0 z-50 isolate transition-[background-color,box-shadow] duration-300 ${
+        scrolled ? "is-scrolled border-b border-white/8 shadow-[0_8px_32px_rgba(0,0,0,0.35)]" : "border-b border-white/5"
       }`}
     >
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 sm:px-8 lg:px-12">

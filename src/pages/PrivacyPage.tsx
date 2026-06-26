@@ -3,7 +3,7 @@ import { Reveal } from "@/components/Reveal";
 
 export function PrivacyPage() {
   return (
-    <div className="bg-navy min-h-screen">
+    <div className="min-h-screen">
       <div className="mx-auto max-w-3xl section-pad">
         <Link href="/" className="text-sm text-muted hover:text-gold">
           ← Home

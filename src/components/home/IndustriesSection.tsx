@@ -7,7 +7,7 @@ export function IndustriesSection() {
   const active = INDUSTRIES.find((i) => i.id === activeId) ?? INDUSTRIES[0]!;
 
   return (
-    <section className="section-pad bg-rich-black">
+    <section className="section-pad">
       <div className="mx-auto max-w-7xl">
         <div className="mt-12 flex flex-wrap gap-3">
           {INDUSTRIES.map((industry) => (

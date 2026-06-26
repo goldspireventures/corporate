@@ -26,7 +26,7 @@ const EXPLORE = [
 
 export function ExploreSection() {
   return (
-    <section className="section-pad !py-20 bg-navy">
+    <section className="section-pad !py-20 border-t border-white/5">
       <div className="mx-auto max-w-7xl">
         <Reveal>
           <p className="text-xs tracking-[0.3em] text-gold">EXPLORE</p>

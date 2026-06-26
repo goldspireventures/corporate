@@ -4,7 +4,7 @@ import { VISION_2035_AREAS } from "@/data/industries";
 
 export function Vision2035Section() {
   return (
-    <section className="section-pad relative overflow-hidden bg-navy">
+    <section className="section-pad relative overflow-hidden">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_70%_20%,rgba(212,175,55,0.08),transparent_45%)]" />
       <div className="relative mx-auto max-w-7xl">
         <div className="relative mt-4">

@@ -7,7 +7,7 @@ import { statusLabel } from "@/lib/motion";
 
 export function CompanyPage({ company }: { company: PortfolioCompany }) {
   return (
-    <div className="bg-navy">
+    <div>
       <section className={`relative overflow-hidden bg-gradient-to-br ${company.gradient}`}>
         <div className="mx-auto max-w-7xl px-5 pb-12 pt-32 sm:px-8 lg:px-12">
           <Link href="/portfolio" className="text-sm text-muted hover:text-gold transition-colors">
@@ -39,7 +39,7 @@ export function CompanyPage({ company }: { company: PortfolioCompany }) {
         </div>
       </section>
 
-      <section className="section-pad bg-rich-black">
+      <section className="section-pad border-t border-white/5">
         <div className="mx-auto max-w-7xl grid gap-16 lg:grid-cols-2">
           <Reveal>
             <h2 className="text-sm tracking-widest text-gold">The problem</h2>
@@ -52,7 +52,7 @@ export function CompanyPage({ company }: { company: PortfolioCompany }) {
         </div>
       </section>
 
-      <section className="section-pad bg-navy border-t border-white/5">
+      <section className="section-pad border-t border-white/5">
         <div className="mx-auto max-w-7xl">
           <Reveal>
             <h2 className="heading-section">Vision</h2>

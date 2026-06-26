@@ -15,7 +15,7 @@ const METRICS = [
 
 export function MetricsSection() {
   return (
-    <section className="section-pad bg-navy border-y border-white/5">
+    <section className="section-pad border-y border-white/5">
       <div className="mx-auto max-w-7xl">
         <div className="mt-4 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           {METRICS.map((m, i) => (

@@ -139,6 +139,16 @@ body {
   object-position: left center;
 }
 
+/* Opaque nav bar — keeps transparent logo readable over the fixed spire watermark */
+.site-header {
+  background-color: rgba(5, 8, 22, 0.94);
+  backdrop-filter: blur(12px);
+}
+
+.site-header.is-scrolled {
+  background-color: rgba(5, 8, 22, 0.98);
+}
+
 .heading-display {
   font-family: var(--font-display);
   @apply text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-semibold tracking-tight leading-[1.05];

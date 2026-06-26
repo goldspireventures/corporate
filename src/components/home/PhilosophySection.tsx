@@ -9,7 +9,7 @@ const TIMELINE = [
 
 export function PhilosophySection() {
   return (
-    <section className="section-pad bg-rich-black">
+    <section className="section-pad">
       <div className="mx-auto max-w-7xl">
         <Reveal>
           <p className="max-w-3xl text-lg leading-relaxed text-muted">

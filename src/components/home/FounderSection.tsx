@@ -2,7 +2,7 @@ import { Reveal } from "@/components/Reveal";
 
 export function FounderSection() {
   return (
-    <section className="section-pad bg-rich-black">
+    <section className="section-pad border-t border-white/5">
       <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[280px_1fr] lg:items-start">
         <Reveal>
           <div className="relative mx-auto aspect-[4/5] w-full max-w-[280px] overflow-hidden rounded-2xl border border-gold/20 bg-gradient-to-br from-gold/10 via-navy to-rich-black">

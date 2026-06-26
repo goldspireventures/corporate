@@ -9,7 +9,7 @@ export function SiteFooter() {
       <div className="mx-auto max-w-7xl section-pad !py-16">
         <div className="grid gap-12 md:grid-cols-4">
           <div className="md:col-span-2">
-            <GoldspireLogo height={56} />
+            <GoldspireLogo height={56} asset="site" />
             <p className="mt-6 max-w-md text-sm leading-relaxed text-muted">
               A holding company and venture studio. We build and back product businesses across
               Europe and Africa.
