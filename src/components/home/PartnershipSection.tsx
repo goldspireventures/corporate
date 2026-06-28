@@ -15,10 +15,10 @@ const PARTNER_TYPES = [
 ] as const;
 
 const STUDIO_OFFERS = [
-  "Fixed-scope web & mobile products",
-  "Template catalog — dating, booking, and more",
-  "Client-owned repos at handover",
-  "Written delivery checkpoints and a private project hub when scoped",
+  "Clone from ~€20k — branded dating or booking app in 6–8 weeks",
+  "Medium-scope template builds — typically €45k–€75k (€60k anchor)",
+  "Client-owned repos, staging, and handover documentation",
+  "Written checkpoints and a private project hub for accept, pay, and sign-off",
 ] as const;
 
 export function PartnershipSection() {

@@ -24,9 +24,9 @@ export function StudioShowcaseTeaser() {
                 Fixed-scope products, built to ship
               </h2>
               <p className="mt-4 text-muted leading-relaxed">
-                Our design and engineering division turns proven templates into branded apps — with
-                clear checkpoints and code you keep. A taste of what is on the shelf; the full picture
-                is on the Studio site.
+                Our design and engineering division turns proven templates into branded apps — from ~€20k
+                clones to medium-scope builds around €60k. Clear checkpoints, a private project hub, and code
+                you keep.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <a

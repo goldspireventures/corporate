@@ -83,7 +83,7 @@ export const PORTFOLIO_COMPANIES: PortfolioCompany[] = [
     name: "Goldspire Studio",
     tagline: "Product design & engineering",
     description:
-      "Goldspire's studio division — fixed-scope design and engineering for founders who need a credible product in market, with clear delivery and code they keep.",
+      "Goldspire's studio division — fixed-scope design and engineering from ~€20k clones to medium-scope template builds (~€60k typical), with clear checkpoints and code clients keep.",
     industry: "Services",
     region: "global",
     status: "live",
