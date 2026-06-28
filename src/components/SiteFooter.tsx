@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { PORTFOLIO_COMPANIES } from "@/data/portfolio";
+import { getPublicPortfolioCompanies } from "@/data/portfolio";
 import { LEGAL_FOOTER_LINE, STUDIO_SITE_URL, SUPPORT_EMAIL } from "@/lib/company";
 import { GoldspireLogo } from "@/components/GoldspireLogo";
 
@@ -22,7 +22,7 @@ export function SiteFooter() {
                   All companies
                 </Link>
               </li>
-              {PORTFOLIO_COMPANIES.slice(0, 4).map((c) => (
+              {getPublicPortfolioCompanies().slice(0, 4).map((c) => (
                 <li key={c.slug}>
                   <Link href={`/companies/${c.slug}`} className="hover:text-gold transition-colors">
                     {c.name}
@@ -74,7 +74,7 @@ export function SiteFooter() {
         </div>
         <div className="mt-16 flex flex-col gap-2 border-t border-white/5 pt-8 text-xs text-muted sm:flex-row sm:items-center sm:justify-between">
           <p>{LEGAL_FOOTER_LINE}</p>
-          <p className="text-soft/60">Holding company · Dublin</p>
+          <p className="text-soft/60">Venture studio · United Kingdom</p>
         </div>
       </div>
     </footer>

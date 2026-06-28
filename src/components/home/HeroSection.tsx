@@ -10,8 +10,8 @@ export function HeroSection() {
       <div className="relative z-10 mx-auto w-full max-w-7xl px-5 pb-20 pt-32 sm:px-8 lg:px-12">
         <motion.div initial="hidden" animate="visible" variants={stagger(0.12)} className="max-w-4xl">
           <motion.h1 variants={fadeUp} className="heading-display">
-            We build companies that solve{" "}
-            <span className="gold-gradient-text">infrastructure-scale</span> problems.
+            We build ventures that solve{" "}
+            <span className="gold-gradient-text">hard, real-world</span> problems.
           </motion.h1>
           <motion.p variants={fadeUp} className="mt-8 max-w-2xl text-lg leading-relaxed text-muted sm:text-xl">
             Goldspire Ventures Ltd — a holding company and venture studio.

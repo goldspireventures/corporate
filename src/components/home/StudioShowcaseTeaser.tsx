@@ -25,7 +25,7 @@ export function StudioShowcaseTeaser() {
               </h2>
               <p className="mt-4 text-muted leading-relaxed">
                 Our design and engineering division turns proven templates into branded apps — with
-                clear milestones and code you keep. A taste of what is on the shelf; the full picture
+                clear checkpoints and code you keep. A taste of what is on the shelf; the full picture
                 is on the Studio site.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">

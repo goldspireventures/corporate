@@ -5,12 +5,13 @@ export function FounderSection() {
     <section className="section-pad border-t border-white/5">
       <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[280px_1fr] lg:items-start">
         <Reveal>
-          <div className="relative mx-auto aspect-[4/5] w-full max-w-[280px] overflow-hidden rounded-2xl border border-gold/20 bg-gradient-to-br from-gold/10 via-navy to-rich-black">
-            <div className="absolute inset-0 flex items-end p-6">
-              <p className="text-xs tracking-widest text-gold/80">FOUNDER & CEO</p>
-            </div>
-            <div className="absolute inset-0 flex items-center justify-center">
-              <span className="text-6xl font-light text-gold/20">G</span>
+          <div className="relative mx-auto aspect-[4/5] w-full max-w-[280px] overflow-hidden rounded-2xl border border-gold/20 bg-gradient-to-br from-gold/15 via-navy to-rich-black">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(246,213,122,0.12),transparent_55%)]" aria-hidden />
+            <div className="absolute inset-0 flex flex-col justify-end p-6">
+              <p className="text-xs tracking-widest text-gold/80">LEADERSHIP</p>
+              <p className="mt-2 text-sm leading-relaxed text-soft/90">
+                Patient capital, disciplined execution, and products built to last.
+              </p>
             </div>
           </div>
         </Reveal>

@@ -7,6 +7,7 @@ import { SUPPORT_EMAIL } from "@/lib/company";
 const NAV = [
   { href: "/philosophy", label: "Philosophy" },
   { href: "/portfolio", label: "Portfolio" },
+  { href: "/industries", label: "Industries" },
   { href: "/vision", label: "Vision" },
   { href: "/partner", label: "Partner" },
 ] as const;

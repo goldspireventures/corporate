@@ -18,7 +18,7 @@ const STUDIO_OFFERS = [
   "Fixed-scope web & mobile products",
   "Template catalog — dating, booking, and more",
   "Client-owned repos at handover",
-  "Milestone delivery with a client portal",
+  "Written delivery checkpoints and a private project hub when scoped",
 ] as const;
 
 export function PartnershipSection() {
@@ -36,7 +36,7 @@ export function PartnershipSection() {
                 <p className="mt-4 text-muted leading-relaxed">
                   Goldspire Studio is our product design and engineering division. Founders and operators
                   come to us when they need something real in market: a branded app from a proven template,
-                  a scoped blueprint build, or a fixed-price path with clear milestones and code they keep.
+                  a scoped custom build, or a fixed-price path with clear checkpoints and code they keep.
                 </p>
                 <ul className="mt-6 space-y-2 text-sm text-soft">
                   {STUDIO_OFFERS.map((item) => (

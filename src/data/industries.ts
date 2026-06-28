@@ -21,7 +21,7 @@ export const INDUSTRIES: Industry[] = [
     headline: "Useful systems with clear limits",
     detail:
       "Assistants and operational tools that stay inside defined permissions — for teams, not demos.",
-    examples: ["S.I.M.I.", "Livia operational intelligence"],
+    examples: ["S.I.M.I.", "Veil in-context detection"],
   },
   {
     id: "commerce",
@@ -62,6 +62,14 @@ export const INDUSTRIES: Industry[] = [
     detail:
       "Operating systems for industries that have outgrown generic tools.",
     examples: ["Livia"],
+  },
+  {
+    id: "security",
+    name: "Security",
+    headline: "Protection where people already work",
+    detail:
+      "Browser-native tools and team policy that reduce everyday data risk — without asking people to change how they work.",
+    examples: ["Veil"],
   },
 ];
 

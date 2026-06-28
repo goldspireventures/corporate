@@ -1,6 +1,12 @@
 import { Link } from "wouter";
 import { Reveal } from "@/components/Reveal";
-import { CORPORATE_DOMAIN, LEGAL_ENTITY_JURISDICTION, LEGAL_ENTITY_NAME, SUPPORT_EMAIL } from "@/lib/company";
+import {
+  CORPORATE_DOMAIN,
+  LEGAL_ENTITY_JURISDICTION,
+  LEGAL_ENTITY_NAME,
+  STUDIO_SITE_URL,
+  SUPPORT_EMAIL,
+} from "@/lib/company";
 
 export function PrivacyPage() {
   return (
@@ -29,6 +35,26 @@ export function PrivacyPage() {
           <p className="mt-3 text-sm leading-relaxed text-muted">
             To respond to enquiries, improve our corporate website, and communicate regarding partnership or
             investment opportunities. We do not sell personal data.
+          </p>
+        </Reveal>
+        <Reveal delay={0.18}>
+          <h2 className="mt-10 text-lg font-semibold text-gold">Portfolio products</h2>
+          <p className="mt-3 text-sm leading-relaxed text-muted">
+            Individual ventures maintain their own privacy policies for product sites and apps. For
+            example:{" "}
+            <a
+              href="https://join-veil.goldspireventures.com/privacy.html"
+              className="text-gold hover:underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Veil
+            </a>
+            , and Goldspire Studio at{" "}
+            <a href={`${STUDIO_SITE_URL}/privacy`} className="text-gold hover:underline">
+              {STUDIO_SITE_URL.replace("https://", "")}/privacy
+            </a>
+            .
           </p>
         </Reveal>
         <Reveal delay={0.2}>

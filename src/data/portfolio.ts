@@ -19,6 +19,8 @@ export type PortfolioCompany = {
   previewImage?: string;
   /** GitHub repo name under github.com/goldspireventures */
   githubRepo?: string;
+  /** When false, kept in registry but hidden from the public site. */
+  publicSite?: boolean;
 };
 
 export const PORTFOLIO_REGIONS: { id: PortfolioRegion; label: string; description: string }[] = [
@@ -163,6 +165,7 @@ export const PORTFOLIO_COMPANIES: PortfolioCompany[] = [
     region: "global",
     status: "building",
     githubRepo: "valrolly-events",
+    publicSite: false,
     vision: "Operators run promotion, sales, and door from one coherent system instead of a patchwork of tools.",
     problem:
       "Ticketing products handle checkout. Everything else — staff, comms, on-site changes — often lives in spreadsheets and group chats.",
@@ -231,12 +234,23 @@ export const PORTFOLIO_COMPANIES: PortfolioCompany[] = [
   },
 ];
 
+function isPublicOnSite(company: PortfolioCompany): boolean {
+  return company.publicSite !== false;
+}
+
+/** Companies shown on goldspireventures.com */
+export function getPublicPortfolioCompanies(): PortfolioCompany[] {
+  return PORTFOLIO_COMPANIES.filter(isPublicOnSite);
+}
+
 export function getCompanyBySlug(slug: string): PortfolioCompany | undefined {
-  return PORTFOLIO_COMPANIES.find((c) => c.slug === slug);
+  const company = PORTFOLIO_COMPANIES.find((c) => c.slug === slug);
+  if (!company || !isPublicOnSite(company)) return undefined;
+  return company;
 }
 
 export function getCompaniesByRegion(region: PortfolioRegion): PortfolioCompany[] {
-  return PORTFOLIO_COMPANIES.filter((c) => c.region === region);
+  return getPublicPortfolioCompanies().filter((c) => c.region === region);
 }
 
 const STATUS_SORT: Record<CompanyStatus, number> = { live: 0, building: 1, stealth: 2 };
@@ -256,11 +270,15 @@ export function sortPortfolioCompanies(companies: readonly PortfolioCompany[]): 
 }
 
 export function getLivePortfolioCompanies(): PortfolioCompany[] {
-  return sortPortfolioCompanies(PORTFOLIO_COMPANIES.filter((c) => c.status === "live"));
+  return sortPortfolioCompanies(
+    getPublicPortfolioCompanies().filter((c) => c.status === "live"),
+  );
 }
 
 export function getBuildingPortfolioCompanies(): PortfolioCompany[] {
-  return sortPortfolioCompanies(PORTFOLIO_COMPANIES.filter((c) => c.status === "building"));
+  return sortPortfolioCompanies(
+    getPublicPortfolioCompanies().filter((c) => c.status === "building"),
+  );
 }
 
 export function getCompaniesByRegionSorted(region: PortfolioRegion): PortfolioCompany[] {
@@ -268,16 +286,18 @@ export function getCompaniesByRegionSorted(region: PortfolioRegion): PortfolioCo
 }
 
 export function countLiveVentures(): number {
-  return PORTFOLIO_COMPANIES.filter((c) => c.status === "live").length;
+  return getPublicPortfolioCompanies().filter((c) => c.status === "live").length;
 }
 
-/** All companies with a live product or division today. */
+/** Shipped products — excludes the Studio services division. */
 export function countLiveProducts(): number {
-  return PORTFOLIO_COMPANIES.filter((c) => c.status === "live").length;
+  return getPublicPortfolioCompanies().filter(
+    (c) => c.status === "live" && c.industry !== "Services",
+  ).length;
 }
 
 export function countBuildingVentures(): number {
-  return PORTFOLIO_COMPANIES.filter((c) => c.status === "building").length;
+  return getPublicPortfolioCompanies().filter((c) => c.status === "building").length;
 }
 
 export function countFocusRegions(): number {
@@ -289,13 +309,15 @@ export type PortfolioMetric = { label: string; value: number };
 /** Vision / metrics strip — every value derived from portfolio data, no literals. */
 export function getPortfolioMetrics(): PortfolioMetric[] {
   return [
-    { label: "Portfolio companies", value: PORTFOLIO_COMPANIES.length },
-    { label: "Live today", value: countLiveVentures() },
+    { label: "Portfolio companies", value: getPublicPortfolioCompanies().length },
+    { label: "Live ventures", value: countLiveVentures() },
     { label: "In development", value: countBuildingVentures() },
     { label: "Focus regions", value: countFocusRegions() },
   ];
 }
 
 export function getLiveProductCompanies(): PortfolioCompany[] {
-  return PORTFOLIO_COMPANIES.filter((c) => c.status === "live");
+  return getPublicPortfolioCompanies().filter(
+    (c) => c.status === "live" && c.industry !== "Services",
+  );
 }
