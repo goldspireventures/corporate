@@ -67,7 +67,7 @@ export function PartnershipSection() {
               </div>
               <div className="relative overflow-hidden rounded-xl border border-white/8 bg-rich-black/40">
                 <img
-                  src="/images/portfolio/studio-preview.png"
+                  src="/images/portfolio/studio-preview.svg"
                   alt="Goldspire Studio marketing site preview"
                   className="aspect-[16/9] w-full object-cover object-top"
                   loading="lazy"

@@ -11,7 +11,7 @@ export function StudioShowcaseTeaser() {
           <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
             <div className="relative overflow-hidden rounded-xl border border-white/8 bg-rich-black/40 order-2 lg:order-1">
               <img
-                src="/images/portfolio/studio-preview.png"
+                  src="/images/portfolio/studio-preview.svg"
                 alt="Goldspire Studio — product design and engineering"
                 className="aspect-[16/9] w-full object-cover object-top"
                 loading="lazy"

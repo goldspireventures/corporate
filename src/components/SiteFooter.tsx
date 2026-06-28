@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { getPublicPortfolioCompanies } from "@/data/portfolio";
+import { getLivePortfolioCompanies } from "@/data/portfolio";
 import { LEGAL_FOOTER_LINE, STUDIO_SITE_URL, SUPPORT_EMAIL } from "@/lib/company";
 import { GoldspireLogo } from "@/components/GoldspireLogo";
 
@@ -22,7 +22,7 @@ export function SiteFooter() {
                   All companies
                 </Link>
               </li>
-              {getPublicPortfolioCompanies().slice(0, 4).map((c) => (
+              {getLivePortfolioCompanies().map((c) => (
                 <li key={c.slug}>
                   <Link href={`/companies/${c.slug}`} className="hover:text-gold transition-colors">
                     {c.name}
@@ -63,6 +63,11 @@ export function SiteFooter() {
                 <a href={`mailto:${SUPPORT_EMAIL}`} className="hover:text-gold transition-colors">
                   Contact
                 </a>
+              </li>
+              <li>
+                <Link href="/terms" className="hover:text-gold transition-colors">
+                  Terms
+                </Link>
               </li>
               <li>
                 <Link href="/privacy" className="hover:text-gold transition-colors">

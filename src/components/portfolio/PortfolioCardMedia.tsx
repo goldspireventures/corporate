@@ -1,3 +1,6 @@
+'use client';
+
+import { useState } from "react";
 import type { PortfolioCompany } from "@/data/portfolio";
 
 type PortfolioCardMediaProps = {
@@ -6,7 +9,9 @@ type PortfolioCardMediaProps = {
 };
 
 export function PortfolioCardMedia({ company, className = "" }: PortfolioCardMediaProps) {
-  if (company.previewImage) {
+  const [imageFailed, setImageFailed] = useState(false);
+
+  if (company.previewImage && !imageFailed) {
     return (
       <div
         className={`group/media relative overflow-hidden rounded-lg border border-white/8 bg-black/30 ${className}`}
@@ -16,6 +21,7 @@ export function PortfolioCardMedia({ company, className = "" }: PortfolioCardMed
           alt={`${company.name} product preview`}
           className="aspect-[16/9] w-full object-cover object-top transition-transform duration-500 group-hover/media:scale-[1.02]"
           loading="lazy"
+          onError={() => setImageFailed(true)}
         />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-navy/80 via-navy/15 to-transparent" />
         <div className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-white/5" />

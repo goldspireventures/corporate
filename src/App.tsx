@@ -10,6 +10,7 @@ import { VisionPage } from "@/pages/VisionPage";
 import { PartnerPage } from "@/pages/PartnerPage";
 import { CompanyPage } from "@/pages/CompanyPage";
 import { PrivacyPage } from "@/pages/PrivacyPage";
+import { TermsPage } from "@/pages/TermsPage";
 import { getCompanyBySlug } from "@/data/portfolio";
 
 function CompanyRoute() {
@@ -45,6 +46,7 @@ export function App() {
           <Route path="/partner" component={PartnerPage} />
           <Route path="/companies/:slug" component={CompanyRoute} />
           <Route path="/privacy" component={PrivacyPage} />
+          <Route path="/terms" component={TermsPage} />
           <Route>
             <div className="flex min-h-[60vh] flex-col items-center justify-center px-6 text-center">
               <h1 className="text-2xl font-semibold">Page not found</h1>

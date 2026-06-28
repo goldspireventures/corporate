@@ -1,12 +1,14 @@
 import { Link } from "wouter";
 import { Reveal } from "@/components/Reveal";
-import { PORTFOLIO_COMPANIES } from "@/data/portfolio";
+import { getPublicPortfolioCompanies } from "@/data/portfolio";
 import { CompanyCard } from "@/components/portfolio/CompanyCard";
 
 const FEATURED_SLUGS = ["livia", "veil", "goldspire-studio"] as const;
 
 export function PortfolioTeaser() {
-  const featured = FEATURED_SLUGS.map((slug) => PORTFOLIO_COMPANIES.find((c) => c.slug === slug)!);
+  const featured = FEATURED_SLUGS.map(
+    (slug) => getPublicPortfolioCompanies().find((c) => c.slug === slug)!,
+  ).filter(Boolean);
 
   return (
     <section className="section-pad !py-20 border-t border-white/5">
